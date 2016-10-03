@@ -1,0 +1,70 @@
+****************
+* Project 1
+* CompSci 121
+* 09th, Feb, 2015
+* Utsav Roy
+**************** 
+
+PROJECT OVERVIEW:
+
+This Java application displays two vehicles traveling in opposite directions 
+on a single two-lane road. The application also shows an observer is waiting 
+to cross the road.   
+
+INCLUDED FILES:
+
+ * README - this file
+ * TrafficAnimation.java - source code
+
+
+BUILDING AND RUNNING:
+
+All project and file is in same directory.
+
+From the directory containing the .java source code, compile the program:
+    $ javac TrafficAnimation.java
+
+Run the program from the directory containing TrafficAnimation.class:
+    $ java TrafficAnimation
+
+As the code doesnot have any input value. It is not going to ask you
+to input any values. All the values are assigned in the code.
+
+
+PROJECT DESIGN NOTES:
+
+The TrafficAnimation class extends the JPanel class. It has all of the properties
+and methods of a JPanel. Jpanel contains the paint component method. 
+
+PaintComponent method takes in the values like dimensions of shapes,strings, the colors 
+and the postion of the object. It gets the values from the user by the use of
+drawRect, drawString,drawArc setColor, newFont. 
+
+All graphic elements are drawn relative to a single anchor point(x=-100) so that
+when the window gets resized, the objects in the canvas gets resized too.
+
+
+The avatar has been made completely out of ovals of different sizes.
+Some of the ovals are inform of circle some are streached oval.
+
+
+
+PROJECT DEVELOPMENT AND TESTING NOTES:
+
+The project was straight forward. I had some obstacles but with multiple attempt I got an idea of co-ordinates,
+and figured out everything was supposed to be related to X and y- Co-ordinate. To re-scale I avoided hard coding.
+
+I did a multiple tests to make sure the code works fine. I increased the height and width of the screen
+and checked if the objects scaled properly or not, everything scaled as I wanted it to.
+
+
+EXTRA CREDIT:
+
+*I made the wheels spin.
+  To rotate the wheels I associated the arc angle with "x" integer. which made the wheel spin.
+  
+*I made the transition smooth.
+  For smooth wrapping I set the position of x way beyond the screen window.
+  
+*I made cars go in opposite direction in two different lanes. 
+  To move the cars in the opposite direction I used the (-x+width). and it started moving form opposite direction. 

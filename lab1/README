@@ -1,0 +1,11 @@
+Assignment 1 ConverToSeconds
+This is a new method. I called in the for a new function import java.util.Scanner
+the i declared a new scanner called input and called in nthe keyboard input (system.in)  
+and then i wrote the program by declating int (hour, minute, seconds) assining them intial value of 0
+then i called for System.out.println 
+and changed the value for key board input function which is declared by Hours = input.nextInt();
+
+Assignment 2 ConvertToHours
+
+its was similar to above except complex math. i did the division of totalseconds by the 60*60 and then use the reminder sign
+i changed the  total hour to the double which prinetd the time in decimal. i changed the total time seconds into the 

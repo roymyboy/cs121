@@ -1,0 +1,84 @@
+****************
+* Project 04
+* CompSci 121-03
+* 8th Apr, 2015
+* Utsav Roy
+**************** 
+
+PROJECT OVERVIEW:
+
+This Java application displays word documents statistics and prints out the 
+final count of words, character, lengths.
+
+
+INCLUDED FILES:
+
+  * ProcessText.java
+  * TextStatsistics.java
+  * TextStatisticsInterface.java
+  * TextStatisticsTest.java
+  * README - this file
+
+
+BUILDING AND RUNNING:
+
+All project files are in the same directory.
+
+From the directory containing the .java source code, compile the program:
+    $ javac ProcessText.java
+    $ javac TextStatsistics.java
+
+Run the program from the directory containing Marshmallow.class:
+    $ java ProcessText
+    $ java TextStatisticsTest
+
+To run program by given input:
+    $ java ProcessText testfile.txt
+    
+User will not be prompted for any values.
+
+PROJECT DESIGN NOTES:
+
+The TextStatsistics class consists of two constructor thats publisc TextStatsistics
+and public void readFile. In addtion to that it consists of methods, variable, attributes
+which is required by the ProcessText to run the application. Since TextStatsistics doesnot
+have main method.
+
+It containd of following methods:
+
+* public TextStatistics(File file): This method handles and calls the reafile.
+
+* public void readFile(File file) throws FileNotFoundException: This method has try catch to prevent
+  from ugly message. It has other methods to read and count lines, words character and keep track 
+  of wordlength from the doc file.
+  
+* public int getCharCount(): It is getter to get the character count.  
+
+* public int getWordCount(): It is getter to get the word count.
+
+* public int getLineCount(): It is getter to get line count. 
+
+* public int[] getWordLengthCount(): It is  getter for  array word length.
+  
+* public ArrayList<Point> getPath(): It is a getter to get reference to the random walk path.
+
+* public double getAverageWordLength(): This is getter for the average word length and it has 
+  math formula for getting the average word length.
+
+PROJECT DEVELOPMENT AND TESTING NOTES:
+
+This project was kind of challenging for me I started it late. Like I had plan and stuff to do 
+but I did know where to start from. I looked at the results given in the instruction and started
+my project from writing code for toString and formatig. I got stuck couple of times but everything
+coming together when I saw the printed results. The main problem i faced was to make a-z print in 
+two different line. I finally had to get help from my friend.
+
+After that I jumped into the my constructors. I did not have any issue printing out character count,
+word count or letter count, i had tough time trying to figure out the frequency. I did alot of reseach
+got some help. I then found the program really interesting and enjoyed doing the rest of the project.
+
+EXTRA CREDIT:
+
+I found the way to print out the largest word in the entire file and it word length but  I was unable to 
+find the way to print out the line number and other stuff. I added a new string "bigWord" which kept track 
+of big word and compared it to the exixting word.length and it worked.

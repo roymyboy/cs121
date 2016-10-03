@@ -1,0 +1,4 @@
+getSource differenciates it into the object.
+
+ActionListener interface and register itself with the component. Furthermore, a component 
+must keep track of its listeners in order to notify them of an event.

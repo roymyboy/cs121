@@ -1,0 +1,24 @@
+*************
+Utsav Roy
+Lab10 
+*************
+
+
+  I did debugging in the followig .java files
+* DebuggerTest2
+
+  I started with eclipse. I downloaded all the fies and tried to run it. When I was running the DebuggerTest2.java 
+  Ithad some error so I run debug on it and saw the issue was on line 11 with the for loop. with the sign operators.
+  I erased the "=" sign and that fixed.
+
+* FindRoute.java
+  As I was going through the debugger each line I saw the semi colon in the code in the while loop and fixed the 
+  the cpde was never entering the loop. when I came down to inside the code the debugger took me to the Car.java
+
+* Car.java
+  When it took me to the direction i saw the direction was messed up and it was taking to the wrong direction. 
+  I fixed the EAST direction anfd the west direction. I made following changes.
+	    nextMove = Direction.EAST;
+            currentLocation.x++;
+            nextMove = Direction.WEST;
+            currentLocation.x--;

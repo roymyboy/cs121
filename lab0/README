@@ -1,0 +1,14 @@
+//Utsav Roy 121L-001
+//When i changed the namke from helloWrld to helloworld i got error saying "helloWorld.java:1: error: class helloworld is public, should be declare in a file named helloworld.java ublic class helloworld"
+//i changed the name back to the helloWorld it worked again.
+//When i removed a semicolon i got an error satying "helloWorld.java:5: error: ';' expected ystem.out.println("Hellow world")"
+//i added back the semicolon and the code worked again
+//when i removed a curl bracket it said "helloWorld.java:5: error: ')' expected m.out.println("Hellow world";
+//i added the curl bracket again and it worked back.
+//when i did remove the double quote from the end it saysprocessing is explicitly requested
+//deleted the bracket and it said "helloWorld.java:6: error: reached end of file while parsing
+  }
+   ^
+1 error
+"
+//i added the bracket back and it worked

@@ -1,0 +1,96 @@
+*******************************************************************************
+* Project: 03
+* Class:   CompSci 121
+* Date:    The date
+* Name:    Utsav Roy
+*******************************************************************************
+
+PROJECT OVERVIEW:
+
+This Application displays the coordinate starting form [0,0] and prints out the
+path that ends at the [gridSize-1, gridSize-1]
+
+INCLUDED FILES:
+
+ * README - this file
+ * RandomWalk.java
+ * RandomWalkTest.java
+ * GridMap.java
+ * RandomWalkGUI.java
+
+BUILDING AND RUNNING:
+All project files should be in the same directory.
+
+From the directory containing the .java source code, compile the program:
+    $ javac RandomWalkTest.java
+    $ javac RandomWalkGUI.java
+
+Run the program from the directory containing Marshmallow.class:
+    $ java RandomWalkTest
+    $ java RandomWalkGUI
+
+User will be prompted for integer values representing the gridsize and the
+seed value. If the user enters Gridsize less than 0 the application will keep 
+on asking for a number grater than 0. Seed value can be 0 or greater but it cannot
+be less than 0. 
+
+PROGRAM DESIGN:
+
+The RandomWalk class consists of two constructor public RandomWalk(int gridSize) 
+and public RandomWalk(int gridSize, long seed). In addition to that, it consists 
+of instance variable, attribute, methods which is required by the RandomWalkTest 
+to run the application RandomWalk. Since it doesnot have the main method. 
+
+It contains the following methods: 
+
+* public RandomWalk(int gridSize): This method sets up all the parameters and crates a random number generator
+  withoud seed value.
+
+* public RandomWalk(int gridSize, long seed): It is same as the public RandomWalk(int gridSize)
+  but it creates a random number generator with a seed.
+  
+* public void createWalk(): It creates the entire walk by internally using the step() method.  
+
+* public boolean ifStuck(): It checks the previous path and keeps from going back. It also rests when stuck.
+
+* public void step(): This method ceates a single step which is further called by the loop to build the 
+  entire path. It also calls ifStuck method and adds point [0,0] if stuck. 
+
+* public boolean isDone(): It is a getter whcih checks if the point being created is either end point or not
+  once the build path is true it returns true and the applications stops making further point.
+  
+* public ArrayList<Point> getPath(): It is a getter to get reference to the random walk path.
+
+* public String toString(): Returns the path as a formatted string as:
+  [0,0] [0,1] [0,2] [1,2] [2,2] [3,2] [4,2] [4,3]......... [gridSize-1,gridSize-1] 
+  
+The RandomWalkTest consists of static method getInput() which collects and manages the user input.
+It does the following:
+
+* Asks for gridSize and seed value.
+
+* Prompts the user for a gridsize greater than 0 if entered 0 or less than  or equal to 0.
+  Prompts the user for a seed value greater than or equal to 0 if entered less than 0.
+  
+PROGRAM DEVELOPMENT AND TESTING DISCUSSION:
+
+I found this project really usefull in both constucting problem solving skill as well as teaching useful
+technique of ArrayList. I got stuck in the project in the beginning but after reading the instruction 
+over and over again it all started to make sense. The first time when I ran my RandomWalkTest it would not 
+take any integers after spending alot of time i figures put my attributes in the constructor was not in order
+which was kind of time taking and new thing to learn. I missed the points like not using the loops in the
+right place which would print out only one point and stop. I also missed the loop in the toString method when 
+i first tried to run it but everything was comming together when i was running it and seeing all those errors
+i had in my program.
+
+I tested my program using different seed values and it worked fine. I also checked the validity of my 
+RandomWlakTest by inserting 0 and less as the gridSize and value less than 0 for seed and it seed to work 
+fine. I made it to print only to coordinate per line.
+
+EXTRA CREDIT:
+
+This was a little time consuming but it was the most fun part. I added a new method public void ifStuck() 
+which checks for the previous path and prevents it from going back. It is further called by step() method 
+which creates one step and the entire path is created in createWalk method. Everything is inter-related to 
+endpoint and taking one further step by adding +1 to either x-coordinate or y-coordinate. Once it gets to 
+endpoint it stops making further new point. It finds the final point after multiple attempt

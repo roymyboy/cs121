@@ -1,0 +1,76 @@
+*******************************************************************************
+* Project: Project 5[Mine Walker Game]
+* Class:   CompSci-003
+* Date:    04/29/2015
+* Name:    Utsav Roy
+********************************************************************************
+
+OVERVIEW:
+
+  This java application lets user to play a mine game starting from right bottom 
+  corner on the grid trying to avoid hidden mine. While playing game user gets 
+  several options like show mine show path. 
+
+
+INCLUDED FILES:
+
+  * README -this files
+  * MineWalker.java - Driver
+  * MineWalkerPanel.java - Class with methods
+  * RandomWalk.java - Creates the random path
+
+BUILDING AND RUNNING:
+  
+  All prject is in the same directory
+  
+  From the Directory containing the .java sorce code, compile the program:
+      $ javac MineWalker.java
+      
+  From the program, the directory containing MineWalker.class:
+      $ java MineWalker
+      
+  The user will not be prompted to input any value in the begining. But user will
+  have an option to setup there grid dimension as prefered. The default grid dimension 
+  is set to 10*10.
+
+PROGRAM DESIGN:
+
+  The MineWalkerPanel extends Jpanel, it has all the method and attributes of Jpanel.
+  The Constructor MineWalkerPanel() has all panels,labels, button and slider. The center
+  panel is buttons where the game is actually played. The buttons change there labels when clicked
+  for "New Game" to "Give up", "Show Path" to "Hide Path" and "Show Mines" to "Show Mine". 
+  The panel also contains a slider.The panel has a JTextField where user can input the grid 
+  size and the Text field is setup in a way that it will not accept any other string or double value.
+  if entered it will reset to default value i.e 10.
+  
+  The top part is topPanel where user can see the score update. It holds the user current score.
+  The games has labels 
+  
+  * Green:  zero mines in the four adjacent tiles
+  * Yellow:  one mine in the four adjacent tilesI
+  * Orange: two mines in the four adjacent tiles
+  * Red: three mines in the four adjacent tiles
+
+  Mines gebnerated is random taking the gridDimension. The program uses Project 3 random walk file
+  to generate a path. The game is setup in a way that it has one possible path all the time
+  
+  The score scheme is if the user reaches the top of the panel without loosing 5 lifes they will win.
+  If the user looses 5 lifes before reaching the final will lose. 
+
+PROGRAM DEVELOPMENT AND TESTING DISCUSSION:
+
+ I have used 2D array to buid the program, it made the code look good and took less time.
+ but i faced alot of problem setting up mines and implementing it on the grid. Minewhile i 
+ was facing the problem revalidating the game, every time i was hitting new game i was 
+ getting null pointer and finally after 3 hours of hit and trial i figured that i was making 
+ two different gridDimension so it was removing the prvious and kept on adding the old panel.
+ I have tried to create methods as much as possible to make it look good.
+ 
+ I personally enjoyed doing this program though i faced alot of problem in the begining
+ understanding concept. I have tested the game everyway and even tried to break it by making
+ the grid dimension big and puting string the gridSize text field. But everything seemed to work fine.
+ the color are labeled on the right hand side of the panel. 
+ 
+EXTRA CREDIT: 
+
+I did set up the slider but i was not able to figure to work.

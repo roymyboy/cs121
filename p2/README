@@ -1,0 +1,73 @@
+****************
+* Project 2
+* CompSci 121
+* 25th, Feb, 2015
+* Utsav Roy
+**************** 
+
+OVERVIEW:
+
+The PlayList class prompts three time fro user to input data after that program 
+terminates and shows the average playtime of the input values followed by the 
+song that is close to 240 second and finally a table showing all three songs 
+according to the time length.
+
+
+INCLUDED FILES;
+
+All project and file is in same directory.
+
+PlayList.java
+Song.java
+PlayMusic.java
+input.txt
+README
+
+BUILDING AND RUNNING:
+
+
+From the directory containing the .java source code, compile the program:
+    $ javac PlayList.java
+
+Run the program from the directory containing TrafficAnimation.class:
+    $ java PlayList
+    
+To run the program by the given input:
+    $ java PlayList < input.txt
+ 
+
+PROGRAM DESIGN:
+
+The first part of the program prompts user to enter four different data 
+for three songs which is artist, title, playtime, filename. Once the user
+is done inputting the values the program takes the inputs and processes it
+to print out the average playtime of all three songs in seconds.
+ 
+The maximum and minimum values are found by the Math.max and Math.min.
+ 
+Then the program prints out the time closest to 240 seconds that is done by 
+substracting the time length between 240 seconds and time length of the song
+individually using Math.abs. the song time is extractrd by getPlayTime. 
+
+
+TESTING:
+
+This program was tested by using input.txt and also by putting the manual inputs.
+Couple of errors were encountered while compiling and  running it saying "String 
+beyond the limit". After playing with it for awhile i was able to figure out and 
+i added "index" instead of assigning the actual number values. 
+
+ 
+DISCUSSION:
+
+The program is pretty straight forward but requires close attention and focus.
+The issues that i encountered were pretty simple and easily fixable after some research
+from internet, books and instructors guidelines.i have tried not to hard code anything
+in my program.
+ 
+ 
+EXTRA CREDIT:
+
+I added a play method in Song.java using PlayMusic.java. 
+To paly song i called the method in PlayList.java.
+Song1.play();, song2.java(); and song3.java();
